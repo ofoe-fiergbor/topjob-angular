@@ -1,0 +1,124 @@
+.home-header {
+  max-width: 100vw;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100vw;
+  margin: 0;
+}
+
+.col-left {
+  width: 50%;
+  display: flex;
+  position: relative;
+  background-color: #EFF1F3;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-left > h1 {
+  font-size: 6em;
+  line-height: 1em;
+  padding-left: 20%;
+  height: 50%;
+  font-family: 'Futara', sans-serif;
+}
+
+.col-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EFF1F3;
+  position: relative;
+}
+
+.round-shape {
+  background-color: #BCD7E8;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin-bottom: 10rem;
+  margin-right: 15%;
+  position: absolute;
+}
+
+.col-right > img {
+  height: 100%;
+  margin-right: 20%;
+  z-index: 9;
+}
+
+.search-job {
+  background-color: white;
+  margin-left: 15%;
+  width: 70%;
+  padding: 1.5% 2.5%;
+  border-radius: 10px;
+}
+
+.search-job h2 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.search-job form {
+  width: 100%;
+  height: 8em;
+  padding: 0;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+}
+
+.row-2 {
+  padding: 3% 12%;
+}
+
+.job:first-child {
+  border-top: 1px solid grey;
+}
+
+.job {
+  border-bottom: 1px solid grey;
+}
+
+.search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin: 0 0 1em 0;
+  font-weight: bold;
+}
+.search > p {
+  padding: 0;
+  margin:0 1em 0 0;
+}
+.title {
+  padding-top: 1%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.clear-btn {
+  width: fit-content;
+  cursor: pointer;
+
+}
+
+.title > a {
+  color: darkblue;
+  cursor: pointer;
+}
+
+

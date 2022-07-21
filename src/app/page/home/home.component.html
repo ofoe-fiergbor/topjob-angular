@@ -1,0 +1,64 @@
+<div>
+  <div class="home-header">
+    <div class="row">
+      <div class="col-left">
+        <h1>Find Every Job in One Platform</h1>
+        <div class="search-job">
+          <h2>Search Job</h2>
+          <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="outline">
+              <input formControlName="role" matInput placeholder="Search for a job.">
+            </mat-form-field>
+            <button type="submit" mat-raised-button color="accent">Search job</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="round-shape"></div>
+        <img src="assets/image/png/homeHeaderImage.png" alt="home header image"/>
+      </div>
+    </div>
+    <div class="row-2">
+      <h1 *ngIf="searchResult.length===0; else search2">All jobs</h1>
+
+      <div *ngIf="searchResult.length === 0; else search" class="jobs">
+        <div class="job" *ngFor="let job of jobs">
+          <div class="title">
+            <a (click)="openLink(job.url)">{{job.role}}</a>
+            <p>{{job.location}}</p>
+          </div>
+          <p>{{job.recruiter}}</p>
+          <p>{{job.description}}</p>
+        </div>
+      </div>
+      <mat-paginator
+        [length]="length"
+        [pageSize]="pageSize"
+        [pageSizeOptions]="pageSizeOptions"
+        (page)="trackPageEvent($event)"
+        *ngIf="searchResult.length === 0"
+        aria-label="Select page"
+      >
+      </mat-paginator>
+    </div>
+  </div>
+</div>
+
+<ng-template #search2>
+  <div class="search">
+    <p>Search result for: {{roleSearch}}</p>
+    <a class="clear-btn" (click)="clearSearch()">Cancel</a>
+  </div>
+</ng-template>
+<ng-template #search>
+  <div class="jobs">
+    <div class="job" *ngFor="let job of searchResult">
+      <div class="title">
+        <a (click)="openLink(job.url)">{{job.role}}</a>
+        <p>{{job.location}}</p>
+      </div>
+      <p>{{job.recruiter}}</p>
+      <p>{{job.description}}</p>
+    </div>
+  </div>
+</ng-template>

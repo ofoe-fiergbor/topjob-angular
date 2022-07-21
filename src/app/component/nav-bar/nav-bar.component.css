@@ -1,0 +1,31 @@
+.nav-bar {
+  display: flex;
+  align-items: center;
+  padding: 0 2%;
+  max-width: 100vw;
+  height: 7vh;
+  cursor: pointer;
+  background-color: #EFF1F3;
+}
+
+h3{
+  color: #D93D33;
+  padding-top: 0.5em;
+  font-size: 2.5em;
+}
+
+.nav-bar ul {
+  margin: 0 5%;
+  list-style: none;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  width: 50%;
+}
+
+.nav-bar ul li {
+  margin: 0 5%;
+  font-weight: 500;
+}
